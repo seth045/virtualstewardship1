@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antibiotic Dosing</title>
+
+  <!-- Your global theme -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Your bacteria/dosing styles -->
+  <link rel="stylesheet" href="bacteria-style.css" />
+</head>
+
+<body class="antibiotic-page">
+
+  <!-- Top row (matches your newer pages) -->
+  <header class="page-top">
+    <button class="back-btn" type="button" onclick="history.back()" aria-label="Back">
+      <!-- back arrow -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <h1 id="antibiotic-name" class="page-title">Antibiotic</h1>
+
+    <a class="home-btn" href="index.html">Home</a>
+  </header>
+
+  <main class="page-wrap">
+
+    <!-- Indications / dosing accordion -->
+    <section class="section">
+      <h2 class="section-title">Indications & Dosing</h2>
+
+      <!-- JS will populate this -->
+      <div id="indications-tabs" class="accordion-list"></div>
+    </section>
+
+    <!-- Renal adjustments card -->
+    <section class="section">
+      <h2 class="section-title">Renal Adjustments</h2>
+
+      <div class="table-card">
+        <table class="renal-table">
+          <thead>
+            <tr>
+              <th>CrCl Range</th>
+              <th>Dose Adjustment</th>
+            </tr>
+          </thead>
+          <tbody id="renal-adjustment-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="bacteria-script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+<!-- =========================
+CNS_brain_abscess_postsurgical_UPDATED.html
+========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brain Abscess - Post Surgical Procedure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="empiric-page">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand-mark">OS</div>
+      <div class="brand-text">
+        <div class="brand-name">OnlineSteward</div>
+        <div class="brand-subtitle">Antimicrobial Guide</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail-shell">
+    <div class="detail-topbar left-align">
+      <a class="detail-back" href="CNS_infections.html" aria-label="Back to Central Nervous system infections">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <h1 class="detail-title">Brain Abscess - Post Surgical Procedure</h1>
+    </div>
+
+    <h2 class="detail-section-title">Treatment</h2>
+
+    <div class="accordion-card" id="cns-accordion">
+      <!-- Common organisms -->
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">
+          <span class="acc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20M2 12h20" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="acc-label">Common organisms</span>
+          <span class="acc-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="acc-panel" hidden>
+          <div class="acc-content">
+            <ul>
+              <li>Streptococci</li>
+              <li>Staphylococcus aureus</li>
+              <li>Coagulase negative Staphylococcus</li>
+              <li>Enterobacterales</li>
+              <li>Pseudomonas aeruginosa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommended regimen -->
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">
+          <span class="acc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 12l2 2 4-5" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="acc-label">Recommended regimen</span>
+          <span class="acc-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="acc-panel" hidden>
+          <div class="acc-content">
+            <ul>
+              <!-- Keep + regimen as ONE list item -->
+              <li>Cefepime + Metronidazole + Vancomycin</li>
+            </ul>
+            <p class="acc-note">ID consult strongly recommended</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alternative regimen -->
+      <div class="acc-item">
+        <button class="acc-btn" type="button" aria-expanded="false">
+          <span class="acc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 6v6l4 2" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9z" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="acc-label">Alternative regimen</span>
+          <span class="acc-chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+
+        <div class="acc-panel" hidden>
+          <div class="acc-content">
+            <ul>
+              <!-- Keep + regimen as ONE list item -->
+              <li>Meropenem + Vancomycin</li>
+            </ul>
+            <p class="acc-note">ID consult strongly recommended</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+
+  <!-- Accordion behavior (matches SSTI/Bone&Joint/IAI/CNS pages) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".acc-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const panel = btn.nextElementSibling;
+          if (!panel) return;
+
+          const isExpanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!isExpanded));
+          panel.hidden = isExpanded;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

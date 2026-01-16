@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnlineSteward - Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <main class="portal-outer">
+    <div class="portal-center">
+
+      <!-- BIG LOGO AREA
+           Option A (recommended): drop an image in your folder and use it here:
+           <img class="portal-logo-img" src="baptist-health-logo.png" alt="Baptist Health" />
+      -->
+      <div class="portal-logo">
+        <div class="portal-logo-mark" aria-hidden="true"></div>
+        <div class="portal-logo-text">
+          <div class="portal-logo-title">Online</div>
+          <div class="portal-logo-title">Steward</div>
+        </div>
+      </div>
+
+      <!-- Tiles -->
+      <div class="portal-tiles">
+        <button class="portal-tile portal-pink" onclick="goTo('useful_tools.html')">
+          
+          <span class="portal-tile-label">Useful Tools </span>
+        </button>
+
+
+        <!-- Point this one to your CURRENT home screen content (moved to decision-support.html) -->
+        <button class="portal-tile portal-teal" onclick="goTo('decision-support.html')">
+          <span class="portal-tile-label">Empiric Treatment Recommendations</span>
+        </button>
+
+        <button class="portal-tile portal-orange" onclick="goTo('bacteria-index.html')">
+          <span class="portal-tile-label">Pathogens</span>
+        </button>
+
+        <button class="portal-tile portal-orange" onclick="goTo('Antibiogram.html')">
+          <span class="portal-tile-label">Antibiogram</span>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

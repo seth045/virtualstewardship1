@@ -1,0 +1,1484 @@
+/* ========== GLOBAL THEME (Integris-like) ========== */
+:root {
+    --integris-teal: #008773;       /* primary accent */
+    --integris-teal-dark: #006b5b;  /* darker accent */
+    --integris-navy: #003b49;       /* logo-style deep blue */
+    --bg-page: #f4f6f7;             /* overall page background */
+    --bg-card: #ffffff;             /* cards / panels */
+    --border-subtle: #d1d9e0;       /* light borders */
+    --text-main: #1f2933;           /* main text color */
+    --text-muted: #6b7280;          /* secondary text */
+  }
+  
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+  }
+  
+  /* ========== TOP HOSPITAL-STYLE HEADER ========== */
+  
+  .site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  
+  .site-header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background: var(--integris-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .brand-name {
+    font-weight: 600;
+    color: var(--integris-navy);
+    font-size: 1rem;
+  }
+  
+  .brand-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  
+  /* ========== LAYOUT CONTAINER ========== */
+  
+  .outer-wrapper {
+    min-height: calc(100vh - 64px); /* leave room for header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+  }
+  
+  .home-container,
+  .page-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+    padding: 32px 24px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+  
+  /* ========== TITLES ========== */
+  
+  .app-title {
+    text-align: left;
+    margin-bottom: 24px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--integris-navy);
+  }
+  
+  .page-title {
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--integris-navy);
+  }
+  
+  .page-subtitle {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  
+  /* ========== MAIN MENU BUTTONS (HOME + SSTI TYPE) ========== */
+  
+  .menu-button {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 16px 16px;
+    background-color: #f9fafb;
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--integris-teal);
+    font-size: 1.02rem;
+    text-align: left;
+    cursor: pointer;
+    color: var(--text-main);
+    transition: background-color 0.1s ease, box-shadow 0.1s ease,
+      transform 0.08s ease, border-color 0.1s ease;
+  }
+  
+  .menu-button:hover,
+  .menu-button:focus-visible {
+    background-color: #ecfdf5;
+    border-color: var(--integris-teal-dark);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+  }
+  
+  /* ========== BACK BUTTON ========== */
+  
+  .back-button {
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--integris-navy);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .back-button:hover {
+    background-color: #f3f4f6;
+  }
+
+  /* Resistance marker "tabs" on bloodstream cluster pages */
+.resistance-tabs {
+  width: 100%;
+  max-width: 600px;
+  margin: 16px auto 8px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resistance-button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  background-color: #f9fafb;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: background-color 0.1s ease, border-color 0.1s ease,
+    box-shadow 0.1s ease, transform 0.08s ease;
+}
+
+.resistance-button:hover {
+  background-color: #ecfdf5;
+  border-color: var(--integris-teal-dark);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.resistance-button.active-resistance {
+  background-color: #ecfdf5;
+  border-color: var(--integris-teal-dark);
+}
+
+.bsi-result {
+  width: 100%;
+  max-width: 600px;
+  margin: 16px auto 0 auto;
+}
+
+.bsi-summary {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Utility, in case you don't already have it */
+.hidden {
+  display: none;
+}
+
+  
+  /* ========== DETAIL PAGE TITLE BAR (e.g., Non-purulent Cellulitis) ========== */
+  
+  .title-bar {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    padding: 12px 16px;
+    background: linear-gradient(
+      90deg,
+      var(--integris-teal) 0%,
+      var(--integris-teal-dark) 100%
+    );
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  /* ========== ACCORDION SECTIONS ========== */
+  
+  .accordion {
+    margin-top: 4px;
+  }
+  
+  /* Section header tabs */
+  .accordion-header {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 14px auto 0 auto;
+    padding: 14px 16px;
+    background-color: #f9fafb;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--integris-teal);
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: background-color 0.1s ease, box-shadow 0.1s ease,
+      transform 0.08s ease, border-color 0.1s ease;
+  }
+  
+  .accordion-header:hover,
+  .accordion-header:focus-visible {
+    background-color: #ecfdf5;
+    border-color: var(--integris-teal-dark);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+  }
+  
+  /* Content panel */
+  .accordion-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    padding: 0 16px;
+    background-color: #ffffff;
+    border-left: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    border-radius: 0 0 6px 6px;
+    transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+  }
+  
+  .accordion-content p {
+    padding: 10px 0 14px 0;
+    text-align: left;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+  
+  /* Open state (JS just toggles .open) */
+  .accordion-content.open {
+    max-height: 220px; /* adjust if you add more text */
+    opacity: 1;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+  
+  /* Generic content block (if needed elsewhere) */
+  .page-content {
+    margin-top: 12px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  /* Bloodstream infection selects and summary */
+.select-row {
+  width: 100%;
+  max-width: 600px;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.select-control {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  background-color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.select-control:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.bsi-result {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+}
+
+.bsi-summary {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+  /* ========== RESPONSIVE ========== */
+  
+  @media (max-width: 600px) {
+    .home-container,
+    .page-container {
+      padding: 24px 16px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+  
+    .app-title {
+      font-size: 1.4rem;
+    }
+  
+    .page-title {
+      font-size: 1.3rem;
+    }
+  
+    .menu-button,
+    .accordion-header {
+      font-size: 0.95rem;
+    }
+  }
+  
+  
+
+
+  /* =========================
+   PORTAL / LANDING SCREEN
+   ========================= */
+
+
+
+
+
+.portal-outer {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+
+.portal-center {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+
+/* Logo block (text-based so it works immediately) */
+.portal-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 0;
+}
+
+
+.portal-logo-mark {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  background: var(--integris-teal);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  position: relative;
+}
+
+/* Simple “medical cross” vibe without using any copyrighted image */
+.portal-logo-mark::before,
+.portal-logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 10px solid rgba(255,255,255,0.9);
+  border-radius: 10px;
+}
+.portal-logo-mark::after {
+  inset: 42px;
+  border-width: 10px;
+}
+
+.portal-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+}
+
+.portal-logo-title {
+  font-size: clamp(44px, 6vw, 76px);
+  font-weight: 800;
+  color: var(--integris-navy);
+  letter-spacing: -0.03em;
+}
+
+
+/* If you switch to an actual image logo later */
+.portal-logo-img {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+}
+
+.portal-tiles {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+.portal-tile {
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  width: min(260px, 90vw);
+  border-radius: 10px;
+  padding: 14px 14px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* colored top strip like the screenshot */
+.portal-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+.portal-tile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+  background: #fbfdff;
+}
+
+.portal-tile-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+}
+
+.portal-tile-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Tile color variants */
+.portal-pink::before { background: #ff3d8d; }
+.portal-magenta::before { background: #d946ef; }
+.portal-teal::before { background: #22c1c3; }
+.portal-orange::before { background: #fb923c; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .portal-tiles { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+  .portal-logo-title { font-size: 56px; }
+}
+
+@media (max-width: 560px) {
+  .portal-tiles { grid-template-columns: 1fr; }
+  .portal-logo { gap: 12px; }
+  .portal-logo-mark { width: 82px; height: 82px; border-radius: 16px; }
+  .portal-logo-title { font-size: 46px; }
+  .portal-kbd { display: none; }
+}
+
+
+
+
+/* Decision Support tile grid inside a card */
+.decision-tiles {
+  margin-top: 6px;
+}
+
+/* Make portal tiles behave nicely as <button> elements */
+button.portal-tile {
+  appearance: none;
+  font-family: inherit;
+}
+
+
+
+/* ===== Decision Support: make it fill the screen nicely ===== */
+
+.decision-support-page .outer-wrapper{
+  align-items: flex-start;         /* stop vertical centering */
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+.decision-support-page .home-container{
+  width: min(1200px, 92vw);        /* wider card */
+  max-width: none;
+}
+
+/* Make the tiles use more of the available width */
+.decision-support-page .portal-tiles{
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* Scale down columns on smaller screens */
+@media (max-width: 1050px){
+  .decision-support-page .portal-tiles{
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 780px){
+  .decision-support-page .home-container{
+    width: min(680px, 94vw);
+  }
+  .decision-support-page .portal-tiles{
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+}
+@media (max-width: 520px){
+  .decision-support-page .portal-tiles{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* ===== Decision Support: match home screen (no big card) ===== */
+
+.decision-support-page .outer-wrapper,
+.decision-support-page .home-container {
+  all: unset; /* neutralize the old centered card layout */
+}
+
+/* Reuse a clean centered portal layout like your home screen */
+.portal-shell {
+  min-height: calc(100vh - 72px); /* subtract header height-ish */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;        /* center like home */
+  padding: 40px 24px 60px;
+  background: #f6f8fb;            /* match your app background */
+}
+
+/* Title styling to match the vibe */
+.decision-support-page .portal-title {
+  width: min(1200px, 92vw);
+  margin: 0 0 18px;
+  font-size: 34px;
+  font-weight: 800;
+  color: #0b2b3a;
+}
+
+/* Make tiles fill nicely */
+.decision-support-page .decision-tiles {
+  width: min(1200px, 92vw);
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .decision-support-page .decision-tiles {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .decision-support-page .decision-tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Center the Decision Support heading + grid */
+.decision-support-page .portal-title{
+  width: min(1200px, 92vw);
+  text-align: center;
+  margin: 0 0 22px;
+}
+
+.decision-support-page .decision-tiles{
+  justify-items: center;   /* centers the tiles within each grid cell */
+}
+
+
+
+/* =========================================================
+   BONE & JOINT / EMPIRIC SUBPAGES THEME
+   ========================================================= */
+
+.bonejoint-page,
+.empiric-page {
+  background: #f3f6f9;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header bar with back arrow + title */
+.page-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6edf3;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4f46e5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+}
+.back-btn:hover {
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.page-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0b2b3a;
+  line-height: 1.1;
+}
+
+/* Layout wrapper */
+.page-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 22px 60px;
+}
+
+/* Accordion card set */
+.accordion {
+  background: #ffffff;
+  border: 1px solid #e6edf3;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid #e6edf3;
+}
+
+/* Header row of each accordion section */
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+.accordion-header:hover {
+  background: #f8fafc;
+}
+
+.accordion-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex: 1;
+  color: #0f172a;
+}
+
+.accordion-chevron {
+  color: #4f46e5;
+  transition: transform 0.15s ease;
+}
+
+.accordion-item.open .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+/* Accordion content area */
+.accordion-content {
+  display: none;
+  padding: 0 20px 18px 60px;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: #0f172a;
+}
+.accordion-item.open .accordion-content {
+  display: block;
+}
+
+/* Mini icon badge */
+.accordion-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #3aa0d8;
+  color: #fff;
+}
+
+
+/* =========================================================
+   BONEJOINT (minimal list like Pathogens)
+   ========================================================= */
+
+.bj-shell{
+  min-height: calc(100vh - 72px);
+  padding: 40px 24px 60px;
+  background: #f3f6f9;
+}
+
+.bj-container{
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+.bj-title{
+  margin: 0 0 18px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0b2b3a;
+}
+
+/* minimal accordion list (no emojis/icons) */
+.bj-accordion{
+  background: #fff;
+  border: 1px solid #e6edf3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.bj-item + .bj-item{
+  border-top: 1px solid #e6edf3;
+}
+
+.bj-header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.bj-header:hover{ background: #f8fafc; }
+
+.bj-header-title{
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.bj-chevron{
+  color: #4f46e5;
+  transition: transform 0.15s ease;
+}
+
+.bj-item.open .bj-chevron{
+  transform: rotate(180deg);
+}
+
+.bj-content{
+  display: none;
+  padding: 0 20px 16px 20px;
+}
+
+.bj-item.open .bj-content{ display: block; }
+
+.bj-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px;
+  margin: 10px 0;
+  border: 1px solid #e6edf3;
+  border-radius: 10px;
+  background: #fff;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.bj-link:hover{
+  background: #f8fafc;
+}
+
+.bj-link span{
+  font-weight: 600;
+}
+
+.bj-link .arrow{
+  color: #4f46e5;
+}
+
+/* =========================================================
+   BONEJOINT INDICATION PAGE (like Antibiotic Indications & Dosing)
+   ========================================================= */
+
+.bj-detail-shell{
+  min-height: calc(100vh - 72px);
+  background: #f3f6f9;
+  padding: 24px 22px 60px;
+}
+
+.bj-detail-container{
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+.section-title{
+  margin: 18px 0 14px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0b2b3a;
+}
+
+/* re-usable “antibiotic-style” accordion rows */
+.os-accordion{
+  background: #fff;
+  border: 1px solid #e6edf3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+}
+
+.os-row + .os-row{ border-top: 1px solid #e6edf3; }
+
+.os-row-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 18px;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.os-row-btn:hover{ background: #f8fafc; }
+
+.os-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.os-badge{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #2f7df6; /* same “antibiotic page” blue vibe */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.os-row-title{
+  font-size: 1.08rem;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.os-caret{
+  color: #4f46e5;
+  transition: transform 0.15s ease;
+}
+
+.os-row.open .os-caret{ transform: rotate(180deg); }
+
+.os-panel{
+  display: none;
+  padding: 0 18px 18px 64px;
+  color: #0f172a;
+  line-height: 1.45;
+  font-size: 1.03rem;
+}
+
+.os-row.open .os-panel{ display: block; }
+
+.os-panel ul{
+  margin: 10px 0 0 18px;
+}
+
+.os-panel li{
+  margin: 6px 0;
+}
+/* ===== Bone & Joint list page (match pathogen list look) ===== */
+.page-container--list{
+  max-width: 980px;
+}
+
+.page-heading{
+  margin: 18px 0 18px;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.page-heading--center{
+  text-align: center;
+}
+
+.list-card{
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.list-row{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--text-main);
+  background: #fff;
+  border-bottom: 1px solid #e7edf3;
+  transition: background 120ms ease;
+}
+
+.list-row:last-child{
+  border-bottom: none;
+}
+
+.list-row:hover{
+  background: #f8fafc;
+}
+
+.list-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #16a34a; /* green like pathogen list */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.list-icon svg{
+  width: 22px;
+  height: 22px;
+}
+
+.list-text{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.list-arrow{
+  margin-left: auto;
+  color: #4f46e5; /* purple arrow like your pathogen list */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-arrow svg{
+  width: 18px;
+  height: 18px;
+}
+/* ===== Infection detail page (matches pathogen-detail style) ===== */
+.detail-shell{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+.detail-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start; /* ← aligns items to left */
+  text-align: left;
+  margin: 0;
+  padding: 10px 0 0 20px; /* top-left padding only */
+  position: relative;
+}
+
+
+.detail-back{
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5; /* purple */
+  text-decoration: none;
+  transition: background 120ms ease;
+}
+
+.detail-back:hover{
+  background: rgba(79,70,229,0.08);
+}
+
+.detail-back svg{
+  width: 22px;
+  height: 22px;
+}
+
+.detail-title{
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--text-main, #0f172a);
+}
+
+.detail-section-title{
+  font-size: 22px;
+  font-weight: 800;
+  margin: 22px 0 12px;
+  color: var(--text-main, #0f172a);
+}
+
+.accordion-card{
+  background: #fff;
+  border: 1px solid #e7edf3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.acc-item{
+  border-bottom: 1px solid #e7edf3;
+}
+
+.acc-item:last-child{
+  border-bottom: none;
+}
+
+.acc-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 18px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.acc-btn:hover{
+  background: #f8fafc;
+}
+
+.acc-icon{
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f97316; /* orange like screenshot */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.acc-icon svg{
+  width: 18px;
+  height: 18px;
+}
+
+.acc-label{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main, #0f172a);
+}
+
+.acc-chevron{
+  margin-left: auto;
+  color: #4f46e5; /* purple chevron */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 140ms ease;
+}
+
+.acc-chevron svg{
+  width: 20px;
+  height: 20px;
+}
+
+.acc-btn[aria-expanded="true"] .acc-chevron{
+  transform: rotate(180deg);
+}
+
+.acc-panel{
+  background: #fff;
+}
+
+.acc-content{
+  padding: 0 18px 18px 66px; /* indent aligns under label */
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.acc-content ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.acc-note{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #64748b;
+}
+.detail-topbar.left-align{
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.detail-shell{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 20px 60px; /* slightly tighter top padding */
+}
+/* Professional top-right Home button (aligned with tile grid width) */
+.decision-support-page .ds-topbar{
+  width: min(980px, 92vw);          /* match your content width (NOT full screen) */
+  margin: 0 auto 22px;              /* center the whole bar */
+  position: relative;               /* anchor the home button */
+  display: flex;
+  align-items: center;
+  justify-content: center;          /* centers title */
+}
+
+/* Keep title truly centered */
+.decision-support-page .ds-topbar .portal-title{
+  margin: 0;
+  text-align: center;
+}
+
+/* Put Home in the top-right of the same content column */
+.decision-support-page .ds-home{
+  position: absolute;
+  right: 0;                         /* top-right within the 980px bar */
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-weight: 800;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #d8e2ea;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.decision-support-page .ds-home:hover{
+  background: #f8fafc;
+}
+
+/* Mobile: keep it clean and not cramped */
+@media (max-width: 520px){
+  .decision-support-page .ds-topbar{
+    width: 94vw;
+  }
+  .decision-support-page .ds-home{
+    padding: 7px 12px;
+  }
+}
+/* =========================
+   Decision Support: Title + Home button positioning
+   ========================= */
+
+.ds-toprow{
+  width: min(1100px, 92vw);
+  margin: 0 auto 26px;
+  position: relative;
+}
+
+.ds-title{
+  margin: 0;
+  text-align: center;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Home button sits top-right of the centered content block (NOT the viewport) */
+.ds-home-btn{
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #d5dde8;
+  background: #ffffff;
+
+  font-weight: 600;
+  text-decoration: none;
+  color: #0b1f2a;
+}
+
+.ds-home-btn:hover{
+  background: #f5f8fc;
+}
+
+/* Mobile: keep it clean and not overlapping */
+@media (max-width: 560px){
+  .ds-toprow{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .ds-title{
+    text-align: left;
+    font-size: 26px;
+    flex: 1;
+  }
+  .ds-home-btn{
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   BSI (Verigene) pages – match the newer "yesterday" styling
+   (scoped so Bone/Joint accordion styles don't break BSI)
+   ========================================================= */
+
+body.bsi-page{
+  background: #f3f6f9;
+}
+
+/* Stop the older "center everything vertically" look on BSI pages */
+body.bsi-page .outer-wrapper{
+  align-items: flex-start;
+  padding-top: 28px;
+  padding-bottom: 50px;
+}
+
+/* Make the card wider + cleaner, like the updated pages */
+body.bsi-page .page-container{
+  max-width: 980px;
+  border-radius: 12px;
+  border: 1px solid #e6edf3;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  padding: 26px 22px 34px;
+}
+
+/* Back button: same "pill" look you liked */
+body.bsi-page .back-button{
+  border: 1px solid #d8e2ea;
+  background: #ffffff;
+  color: #0b1f2a;
+  font-weight: 600;
+}
+body.bsi-page .back-button:hover{
+  background: #f8fafc;
+}
+
+/* Big title (matches your updated pages) */
+body.bsi-page .page-title{
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 6px;
+}
+
+/* Organism pill: keep teal vibe but more modern */
+body.bsi-page .title-bar{
+  max-width: 720px;
+  margin: 10px auto 18px auto;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #0f766e 0%, #0b8a74 100%);
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+
+/* Resistance buttons: clean white buttons, active = mint highlight */
+body.bsi-page .resistance-tabs{
+  max-width: 720px;
+}
+body.bsi-page .resistance-button{
+  background: #ffffff;
+  border: 1px solid #e6edf3;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+body.bsi-page .resistance-button:hover{
+  background: #f8fafc;
+  border-color: #cfe0ea;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+}
+body.bsi-page .resistance-button.active-resistance{
+  background: #ecfdf5;
+  border-color: #0f766e;
+}
+
+/* Regimen area */
+body.bsi-page .bsi-result{
+  max-width: 720px;
+  margin-top: 18px;
+}
+body.bsi-page .bsi-summary{
+  margin: 14px 0 8px;
+  font-size: 0.98rem;
+  color: #334155;
+}
+
+/* IMPORTANT: Scope accordion styling to BSI so it doesn't get overridden by Bone/Joint */
+body.bsi-page .accordion-header{
+  width: 100%;
+  max-width: 720px;
+  margin: 12px auto 0 auto;
+  padding: 16px 16px;
+  background: #ffffff;
+  border: 1px solid #e6edf3;
+  border-left: 5px solid #0f766e;
+  border-radius: 12px 12px 0 0;
+
+  font-size: 1.02rem;
+  font-weight: 750;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+/* Make the second accordion header look like a new card (not connected to the previous panel) */
+body.bsi-page .accordion-content + .accordion-header{
+  border-radius: 12px 12px 0 0;
+  margin-top: 14px;
+}
+
+/* Collapsed panel */
+body.bsi-page .accordion-content{
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  max-height: 0;
+  opacity: 0;
+  padding: 0 16px;
+
+  background: #ffffff;
+  border-left: 1px solid #e6edf3;
+  border-right: 1px solid #e6edf3;
+  border-bottom: 1px solid #e6edf3;
+  border-radius: 0 0 12px 12px;
+
+  transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+}
+
+/* Open state (keep .open since your script already uses it) */
+body.bsi-page .accordion-content.open{
+  max-height: 520px;
+  opacity: 1;
+  padding: 12px 16px 16px;
+}
+
+body.bsi-page .accordion-content p{
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #0f172a;
+}
+
+/* Bloodstream list page: allow list rows to be buttons */
+button.list-row{
+  appearance: none;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+/* Make the BSI landing page card a little tighter */
+body.bsi-page .page-container--list{
+  padding: 26px 22px 26px;
+}

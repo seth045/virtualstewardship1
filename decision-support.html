@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antimicrobial Guide - Decision Support</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="decision-support-page">
+  <!-- Top header bar -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="brand-mark">OS</div>
+      <div class="brand-text">
+        <div class="brand-name">OnlineSteward</div>
+        <div class="brand-subtitle">Antimicrobial Guide</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+<main class="portal-shell decision-support-page">
+
+<h1 class="ds-title">Antibiotic Decision Support</h1>
+
+ <div class="back-buttons">
+    <button class="back-button" onclick="window.location.href='index.html'">
+      ← Back to Home
+    </button>
+  </div>
+
+
+      <!-- Tile grid -->
+      <div class="portal-tiles decision-tiles">
+
+        <button class="portal-tile portal-teal" type="button" onclick="goTo('bloodstream-infections.html')">
+          
+          <div class="portal-tile-label">Verigene Bloodstream Infection</div>
+        </button>
+
+        <button class="portal-tile portal-pink" type="button" onclick="goTo('skin-soft-tissue.html')">
+          
+          <div class="portal-tile-label">Skin &amp; Soft Tissue (SSTI)</div>
+        </button>
+
+        <button class="portal-tile portal-orange" type="button" onclick="goTo('intraabdominal-infections.html')">
+          
+          <div class="portal-tile-label">Intra-abdominal infections</div>
+        </button>
+
+        <button class="portal-tile portal-magenta" type="button" onclick="goTo('pneumonia.html')">
+          
+          <div class="portal-tile-label">Pneumonia</div>
+        </button>
+
+        <button class="portal-tile portal-teal" type="button" onclick="goTo('uti.html')">
+          
+          <div class="portal-tile-label">Urinary tract infections</div>
+        </button>
+
+        <button class="portal-tile portal-pink" type="button" onclick="goTo('bonejoint.html')">
+          
+          <div class="portal-tile-label">Bone &amp; joint infections</div>
+        </button>
+
+        <button class="portal-tile portal-orange" type="button" onclick="goTo('CNS_infections.html')">
+          
+          <div class="portal-tile-label">CNS infections</div>
+        </button>
+
+        <button class="portal-tile portal-magenta" type="button" onclick="goTo('Antibiogram.html')">
+          
+          <div class="portal-tile-label">Antibiogram susceptibilities</div>
+        </button>
+      </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
